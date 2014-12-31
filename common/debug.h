@@ -43,6 +43,7 @@
 	#define debug_info(...) debug_info_real (__FUNCTION__, __FILE__, __LINE__, __VA_ARGS__)
 	#define debug_plist(a) debug_plist_real (__FUNCTION__, __FILE__, __LINE__, a)
 	#define __func__ __FUNCTION__
+	#define debug_info(...) printf(##__VA_ARGS__); printf("\n"); fflush(stdout);
 #else
 	#define debug_info(...)
 	#define debug_plist(a)
